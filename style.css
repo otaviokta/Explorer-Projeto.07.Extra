@@ -1,3 +1,4 @@
+/* Reset CSS e Estilos Globais */
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +7,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Definição das cores e fonte padrão do site */
 :root {
-  font-size: 62.5%;
-  font-family: "Mulish", sans-serif;
+  font-size: 62.5%; /* Definindo o tamanho da fonte em 10px para facilitar cálculos */
+  font-family: "Mulish", sans-serif; /* Fonte padrão do site */
 
+  /* Cores personalizadas */
   --color-base-white-01: hsl(0, 0%, 100%);
   --color-base-white-02: hsl(196, 100%, 98%);
   --color-base-white-03: hsla(0, 0%, 100%, 0.2);
@@ -19,129 +22,133 @@
   --color-base-black-02: hsl(240, 5%, 7%);
 }
 
-/* header */
-
+/* Estilos do cabeçalho */
 .container {
+  /* Centraliza os elementos do cabeçalho e define o espaçamento entre eles */
   display: flex;
   align-items: center;
   gap: 2.6rem;
   font-weight: 700;
   background: var(--color-base-blue-01);
-
   padding: 1.2rem 2.8rem;
 }
 
 .logo {
+  /* Estiliza o logo */
   width: 4rem;
   height: 4rem;
   background-color: var(--color-base-white-02);
   padding: 0.8rem;
   object-fit: cover;
-
   border-radius: 50%;
 }
 
+/* Estilos do formulário de busca */
 form {
   flex: 1;
 }
 
 .input-wrapper label {
+  /* Esconde o label para acessibilidade */
   width: 0.1rem;
   height: 0.1rem;
-
   overflow: hidden;
   position: absolute;
 }
 
 .input-wrapper input {
+  /* Estilos do campo de busca */
   width: 100%;
   padding: 1.6rem;
-
   background-color: var(--color-base-white-03);
-
   border: 0;
   border-radius: 0.6rem;
-
   font-size: 1.6rem;
   font-weight: 600;
 }
 
 .input-wrapper input::placeholder {
+  /* Estilo do texto de placeholder */
   color: var(--color-base-white-01);
 }
 
 .img-profile {
+  /* Estilos da imagem de perfil */
   width: 4rem;
   height: 4rem;
-
   object-fit: cover;
-
   border-radius: 50%;
 }
 
-/* main */
-
+/* Estilos da seção principal (herói) */
 .cover-img {
+  /* Estilos da imagem principal */
   width: 100%;
   margin: 0 auto;
 }
 
 .text-itens {
+  /* Estilos dos textos abaixo da imagem principal */
   margin: 3rem 2rem 0;
 }
 
 main h1 {
+  /* Estilos do título principal */
   font-size: 2.4rem;
   font-weight: 800;
   padding-bottom: 1.5rem;
 }
 
+/* Estilos dos botões de "like" e "dislike" */
 .like,
 .dislike {
   width: 4rem;
   height: 4rem;
   background-color: var(--color-base-blue-01);
   border-radius: 50%;
-
   border: none;
   cursor: pointer;
   outline: none;
   color: white;
-
   margin-bottom: 3rem;
 }
 
 .buttons {
+  /* Estilos do container dos botões */
   display: flex;
   gap: 1rem;
 }
 
 p {
+  /* Estilos dos parágrafos de texto */
   font-size: 1.6rem;
   line-height: 160%;
   padding: 0.5rem;
 }
 
-/* aside */
-
+/* Estilos da seção lateral (aside) */
 section {
+  /* Estilos das seções com conteúdo */
   max-width: 1024px;
   margin: 0 auto;
 }
 
 aside {
+  /* Estilos do container lateral */
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   margin: 3rem 2rem 3.9rem;
 }
 
 aside h1 {
+  /* Estilos dos títulos nas seções laterais */
   font-size: 2.4rem;
   font-weight: 800;
   padding-bottom: 3.2rem;
 }
 
 .articles {
+  /* Estilos dos artigos (imagens e conteúdos) */
   display: flex;
   align-items: flex-start;
   gap: 1rem;
@@ -149,6 +156,7 @@ aside h1 {
 }
 
 .articles img {
+  /* Estilos das imagens dos artigos */
   margin-bottom: 3.2rem;
   border-radius: 0.4rem;
   width: 16rem;
@@ -157,21 +165,23 @@ aside h1 {
 }
 
 .articles div {
+  /* Estilos dos conteúdos dos artigos */
   flex: 1;
 }
 
 .articles h2 {
+  /* Estilos dos títulos dos artigos */
   font-size: 1.8rem;
   font-weight: 800;
 }
 
 .articles p {
+  /* Estilos dos parágrafos nos artigos */
   font-size: 1.4rem;
   line-height: 1.5;
 }
 
-/* footer */
-
+/* Estilos do rodapé */
 footer {
   background-color: var(--color-base-blue-02);
   color: #ffffff;
@@ -180,35 +190,41 @@ footer {
   font-size: 1.6rem;
 }
 
+/* Media query para telas maiores */
 @media (min-width: 1024px) {
+  /* Estilos para telas maiores */
   #content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 5.4rem;
-
     margin: 0 auto;
     max-width: 1320px;
   }
 
   .container {
+    /* Espaçamento maior para o cabeçalho em telas maiores */
     padding: 1.2rem 11.2rem;
   }
 
   main {
+    /* Margem maior para a seção principal em telas maiores */
     grid-column: 1;
     margin: 3rem 0 5rem 3rem;
   }
 
   section {
+    /* Posicionamento da seção lateral em telas maiores */
     grid-column: 2;
   }
 
   .cover-img {
+    /* Ajuste da margem da imagem principal em telas maiores */
     margin-left: 2rem;
     border-radius: 0.8rem;
   }
 
   .text-itens div {
+    /* Ajuste para exibir os textos em duas colunas em telas maiores */
     display: flex;
     align-items: center;
     justify-content: space-between;
